@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { GithubOriginalIcon,  GatsbyPlainIcon, WebpackPlainIcon} from "react-devicons";
 
 const Box = styled.div`
+    width: 100% ;
     height:  200px  ;
     padding: 20px ;
     

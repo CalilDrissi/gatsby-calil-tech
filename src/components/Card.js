@@ -4,7 +4,7 @@ import { GithubOriginalIcon,  GatsbyPlainIcon, WebpackPlainIcon} from "react-dev
 
 const Box = styled.div`
 
-    width: 550px ;
+    width: 100% ;
     height:  220px  ;
     padding: 20px ;
     background: #202020;
@@ -18,9 +18,11 @@ const Box = styled.div`
       z-index: 10;
       transform:  scale(1.1, 1.1);
     }
-  
-}
 
+    @media (max-width: 990px) {
+      height: 250px ;
+    }
+  
 `
 const Heading5 = styled.h5`
     font-weight: 300;
@@ -71,8 +73,8 @@ transition:.2s ease-in-out opacity, .2s ease-in-out transform;
   opacity:0;
   padding: auto;
   position:absolute;
-  bottom: 30px;
-  left:-40px;
+  bottom: 40px;
+  left:40px;
   width: 210px;
   height:150px;
   overflow-x:hidden;
@@ -107,21 +109,21 @@ export const Card = ({type, title}) => {
          <Check>
 
             <Linky>Source Code</Linky> 
-            <FrameDiv>
+            {/* <FrameDiv>
                    <iframe 
 
                    src="https://calil.tech"
 height="2000px" width="1000px" ></iframe>
             </FrameDiv>
-       
+        */}
             <span> | </span>
             <Linky> Live Site</Linky>
-            <FrameDiv>
+            {/* <FrameDiv>
                    <iframe 
                     
                    src="https://braydoncoyer.dev/"
 height="2000px" width="1000px" ></iframe>
-            </FrameDiv>
+            </FrameDiv> */}
          </Check>
     </Box>
       </>

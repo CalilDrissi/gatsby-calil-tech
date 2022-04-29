@@ -12,10 +12,12 @@ const GlobalStyle = createGlobalStyle`
  
 html {
   scrollbar-width: none;
+  scroll-behavior:smooth;
 }
 
 body::-webkit-scrollbar {
   display: none;
+
 }
   body{
     
@@ -35,6 +37,18 @@ padding-top: 70px ;
  display: grid ;
  grid-template-columns: 1fr 1fr ;
  grid-column-gap: 2rem;
+
+ @media (max-width: 990px)  {
+  grid-template-columns: 1fr ;
+  grid-template-rows: 40vh auto ;
+  grid-row-gap: 4rem ;
+
+
+}
+@media (max-width: 490px) {
+  grid-template-rows: 50vh auto;
+}
+
 `
 
 // markup
