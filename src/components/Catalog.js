@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Card } from './Card';
 import {CardSquare} from './CardSquare'
 
+
 const Container = styled.div`
    width:  clamp(30vw,45vw, 550px);
   grid-column-start: 2;
@@ -71,21 +72,19 @@ export const Catalog = () => {
     <Container>
 
         <HeadingCat>Most Recent Projects</HeadingCat>
-          <BoxRec>
-
-        
+          <BoxRec id="section1">
             <Card type="Front-end" title="ColegioLink"/>
             <Card  type="Full-Stack" title="Magic Menu"/>
             <Card  type="Mobile" title="Radio"/>
             </BoxRec>
-            <HeadingCat> Older Projects </HeadingCat>
-            <BoxSquare>
-              
+
+
+            <HeadingCat> Older Projects  </HeadingCat>
+            <BoxSquare   id="section2">
             <CardSquare type="Desktop" title="WowSocks"/>
             <CardSquare type="Desktop" title="WowSocks"/>
             <CardSquare type="Desktop" title="WowSocks"/>
-            <CardSquare type="Desktop" title="WowSocks"/>
-            
+            <CardSquare  type="Desktop" title="WowSocks"/>
             </BoxSquare>
            
           

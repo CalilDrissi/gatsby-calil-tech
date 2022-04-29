@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ReactTooltip from 'react-tooltip';
 import { GithubOriginalIcon,  TwitterOriginalIcon} from "react-devicons";
+import Scrollspy from 'react-scrollspy';
 
 const Container = styled.div`
       width:  clamp(30vw,550px, 550px);
@@ -19,7 +20,7 @@ const Container = styled.div`
             & nav {
                   display: none ;
             }
-
+      }
             @media (max-width: 490px) {
             position: relative;
             width: 100% ;
@@ -28,8 +29,16 @@ const Container = styled.div`
             & nav {
                   display: none ;
             }
-}
+      }
 
+      &  a:link,
+           a:visited,
+           a:hover,
+           a:active{
+           color: #fff;
+            text-decoration: none;
+            cursor: auto;
+      }
 `
 
 const Heading = styled.h1`
@@ -62,8 +71,15 @@ const Heading6 = styled.h6`
 `
 
 const Tabs = styled.nav`
-      cursor: pointer;
       font-weight: 100 ;
+    
+      & p.active {
+           font-size: 20px;
+           font-weight: 700 ;
+      
+      }
+
+   
 `
 
 const Connect = styled.div`
@@ -98,7 +114,7 @@ const ProfileImg = styled.img`
 }
 `
 
-const SocialLink = styled.a`
+const SocialLink = styled.p`
    text-decoration: none ;
    margin-left: 5px ;
    transition: all .2s ease-out ;
@@ -125,9 +141,13 @@ export const Hero = () => {
             </div>
      
           <Tabs>
-          <p>01---Most Recent Projects</p>
-          <p>02---Older Projects</p>
+          <Scrollspy items={['section1', 'section2']} currentClassName="active">
+          <p>    <a  href="#section1">01. Most Recent Projects</a></p>
+      
+         <p> <a href="#section1">02.  Older Projects</a></p>
           {/* For Version 2.0 <p>03---Tech Articles</p> */}
+          </Scrollspy>
+    
           </Tabs>
         
 
@@ -135,16 +155,16 @@ export const Hero = () => {
             <Photo>
               < ProfileImg  src="3.jpeg"  alt="me" />
             </Photo>
-            <p>
-            <TwitterOriginalIcon size="15px" color="white" />
-                  <SocialLink>Twitter </SocialLink>
+            <SocialLink>
+            <TwitterOriginalIcon size="14px" color="white" />
+                  <span> Twitter</span>
             
-            </p>
-            <p>
+            </SocialLink>
+            <SocialLink>
             <GithubOriginalIcon size="15px" color="white" />
-            <SocialLink>  Github</SocialLink>
+            <span>  Github</span>
                 
-            </p>
+            </SocialLink>
           </Connect>
 
       </Container>
