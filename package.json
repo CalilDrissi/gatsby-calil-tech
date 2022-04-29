@@ -15,8 +15,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.12.1",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-styled-components": "^5.12.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-devicons": "^2.14.0",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.5"
   }
 }
